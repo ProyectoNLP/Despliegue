@@ -56,6 +56,15 @@ st.write("""¡Bienvenido a la aplicación de bienestar emocional! 😊
 Aquí podrás expresar cómo te sientes y recibir recomendaciones personalizadas para mejorar tu estado de ánimo.
 Ingresa tu estado emocional en el menú a continuación para obtener consejos útiles y prácticos.""")
 
+# Diccionario de traducción de sentimientos
+translation_dict = {
+    'peaceful': 'tranquilo',
+    'mad': 'enojado',
+    'powerful': 'empoderado',
+    'sad': 'triste',
+    'joyful': 'alegre',
+    'scared': 'asustado'
+}
 
 # Cargar el modelo y otros elementos necesarios
 model = tf.keras.models.load_model('Modelo.keras')
@@ -79,8 +88,9 @@ def predict_sentiment(model, user_input, tokenizer, loaded_label_encoder):
         predicted_class_index = np.argmax(prediction, axis=1)
 
         # Traducir la predicción
-        predicted_label = loaded_label_encoder.inverse_transform(predicted_class_index)
-        return predicted_label[0]
+        predicted_label = loaded_label_encoder.inverse_transform(predicted_class_index)[0]
+        translated_label = translation_dict.get(predicted_label.lower(), predicted_label)
+        return translated_label
 
     except Exception as e:
         st.error(f"Error al predecir: {str(e)}")
@@ -109,7 +119,7 @@ if st.button("Dame una recomendación"):
         sentiment_class = predict_sentiment(model, user_input, tokenizer, loaded_label_encoder)
         if sentiment_class:
             recommendation = get_recommendation(sentiment_class)
-            st.write(f"Predicción del sentimiento: {sentiment_class}")
+            st.write(f"Parece que hoy te sentiste: {sentiment_class.capitalize()}")
             st.write(f"Recomendación: {recommendation}")
         else:
             st.warning("No se pudo realizar la predicción.")
