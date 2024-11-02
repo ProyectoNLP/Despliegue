@@ -45,7 +45,7 @@ st.markdown("""
 # Título de la aplicación
 st.markdown('<h1 class="title">Chatbot de Bienestar Emocional</h1>', unsafe_allow_html=True)
 
-st.sidebar.image("C:/Users/difig/Documents/Maestria_Analitica_Javeriana/3er_Semestre/NLP/Proyecto/Archivos_Interfaz/robot.png", use_column_width=True)
+st.sidebar.image("robot.png", use_column_width=True)
 st.sidebar.write("### Líneas de Emergencia")
 st.sidebar.write("""- Línea 155: Orientación psicosocial y jurídica a las víctimas de violencia (24/7).
 - Línea 123: Policía Nacional.
@@ -58,13 +58,13 @@ Ingresa tu estado emocional en el menú a continuación para obtener consejos ú
 
 
 # Cargar el modelo y otros elementos necesarios
-model = tf.keras.models.load_model('C:/Users/difig/Documents/Maestria_Analitica_Javeriana/3er_Semestre/NLP/Proyecto/Archivos_Interfaz/Modelo.keras')
+model = tf.keras.models.load_model('Modelo.keras')
 
-with open('C:/Users/difig/Documents/Maestria_Analitica_Javeriana/3er_Semestre/NLP/Proyecto/Archivos_Interfaz/label_encoder.pkl', 'rb') as handle:
+with open('label_encoder.pkl', 'rb') as handle:
     loaded_label_encoder = pickle.load(handle)
 
 # Cargar el tokenizer
-with open('C:/Users/difig/Documents/Maestria_Analitica_Javeriana/3er_Semestre/NLP/Proyecto/Archivos_Interfaz/tokenizer.pkl', 'rb') as handle:
+with open('tokenizer.pkl', 'rb') as handle:
     tokenizer = pickle.load(handle)
 
 # Función para predecir el sentimiento
@@ -88,7 +88,7 @@ def predict_sentiment(model, user_input, tokenizer, loaded_label_encoder):
 
 
 # Cargar las recomendaciones desde el archivo CSV
-recomendaciones_df = pd.read_csv('C:/Users/difig/Documents/Maestria_Analitica_Javeriana/3er_Semestre/NLP/Proyecto/Archivos_Interfaz/recomendaciones.csv', sep=';')
+recomendaciones_df = pd.read_csv('recomendaciones.csv', sep=';')
 
 # Asegúrate de que el archivo tiene una columna llamada 'sentimiento' y 'recomendacion'
 # Convertir el DataFrame a un diccionario
