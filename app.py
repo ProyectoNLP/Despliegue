@@ -153,11 +153,17 @@ if st.button("Dame una recomendación"):
             else:  # Para el sentimiento "General"
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/2s9xotmpUgEbrR7mmGEC9m' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
 
-            # Mensaje de referencia a Mentes Colectivas
+            # Mensaje sobre el servicio
             st.markdown("""
                 <div style='margin-top: 20px;'>
-                    <p>Si quieres hablar con alguien sobre lo que estás viviendo, por favor consulta:</p>
-                    <iframe src="https://www.javeriana.edu.co/mentescolectivas/" width="300" height="200" frameborder="0" allowtransparency="true"></iframe>
+                    <p><strong>Recuerda que este servicio no reemplaza los servicios que te puede brindar un profesional de psicología, solo es una herramienta.</strong></p>
+                </div>
+            """, unsafe_allow_html=True)
+            
+            # Mensaje sobre Mentes Colectivas
+            st.markdown("""
+                <div style='margin-top: 20px;'>
+                    <p>Si quieres hablar con alguien sobre lo que estás viviendo, puedes consultar el programa <a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">Mentes Colectivas</a> de la Pontificia Universidad Javeriana.</p>
                 </div>
             """, unsafe_allow_html=True)
     
