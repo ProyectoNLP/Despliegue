@@ -162,7 +162,7 @@ if st.button("Dame una recomendación"):
             
             # Mensaje sobre Mentes Colectivas
             st.markdown("""
-                <div style='margin-top: 20px;'>
+                <div style='margin-top: 5px;'>
                     <p>Si quieres hablar con alguien sobre lo que estás viviendo, puedes consultar el programa <a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">Mentes Colectivas</a> de la Pontificia Universidad Javeriana.</p>
                 </div>
             """, unsafe_allow_html=True)
