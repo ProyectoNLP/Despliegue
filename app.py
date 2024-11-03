@@ -7,36 +7,15 @@ import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 import random
 
-# Música de fondo con control de volumen y reproducción automática
+# Música de fondo con reproducción automática y sin controles
 st.markdown("""
-    <style>
-        .audio-container {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            font-size: 12px; /* Tamaño de fuente más pequeño */
-            background-color: transparent; /* Fondo transparente */
-        }
-        /* Ocultar los controles del reproductor de audio */
-        audio {
-            display: none; /* Esto es para ocultar el reproductor */
-        }
-    </style>
     <div class="audio-container">
         <p>Música de fondo 🎶</p>
+        <audio autoplay loop>
+            <source src="musica.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
     </div>
-    <audio autoplay loop id="background-music">
-        <source src="musica.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-""", unsafe_allow_html=True)
-
-# Control de volumen mediante JavaScript
-st.markdown("""
-    <script>
-        var audio = document.getElementById('background-music');
-        audio.volume = 0.5; // Ajusta el volumen inicial (0.0 a 1.0)
-    </script>
 """, unsafe_allow_html=True)
 
 # Título de la aplicación y mensaje de bienvenida
