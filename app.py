@@ -7,6 +7,32 @@ import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 import random
 
+# Música de fondo con control de volumen
+st.markdown("""
+    <style>
+        .audio-container {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            font-size: 12px; /* Cambia el tamaño de la fuente */
+            background-color: transparent; /* Fondo transparente */
+        }
+        .stAudio {
+            display: none; /* Oculta la duración y el control de reproducción */
+        }
+    </style>
+    <div class="audio-container">
+        <p>Música de fondo 🎶</p>
+    </div>
+""", unsafe_allow_html=True)
+
+audio_file = open('musica.mp3', 'rb')
+audio_bytes = audio_file.read()
+
+# Reproducir música de fondo (opcionalmente solo cuando el usuario hace clic)
+if st.button("Reproducir Música de Fondo"):
+    st.audio(audio_bytes, format='audio/mp3', start_time=0)
+
 # Título de la aplicación y mensaje de bienvenida
 st.markdown("""
 <style>
@@ -44,13 +70,6 @@ st.markdown("""
 
 # Título de la aplicación
 st.markdown('<h1 class="title">Chatbot de Bienestar Emocional</h1>', unsafe_allow_html=True)
-
-# Música de fondo con control de volumen
-st.markdown("### Música 🎶")
-audio_file = open('musica.mp3', 'rb')
-audio_bytes = audio_file.read()
-
-st.audio(audio_bytes, format='audio/mp3', start_time=0)
 
 st.sidebar.image("robot.png", use_column_width=True)
 st.sidebar.header("Asistente Virtual")
