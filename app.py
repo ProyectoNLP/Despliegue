@@ -7,16 +7,9 @@ import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 import random
 
-# Música de fondo con reproducción automática y sin controles
-st.markdown("""
-    <div class="audio-container">
-        <p>Música de fondo 🎶</p>
-        <audio autoplay loop>
-            <source src="musica.mp3" type="audio/mp3">
-            Tu navegador no soporta el elemento de audio.
-        </audio>
-    </div>
-""", unsafe_allow_html=True)
+# Música de fondo con Streamlit
+st.markdown("<div class='audio-container'>Música 🎶</div>", unsafe_allow_html=True)
+st.audio("musica.mp3", format="audio/mp3", start_time=0)
 
 # Título de la aplicación y mensaje de bienvenida
 st.markdown("""
