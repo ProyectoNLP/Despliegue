@@ -163,9 +163,10 @@ if st.button("Dame una recomendación"):
 
 # Al final de tu código, antes de cerrar el bloque principal
 st.markdown("""
-    <div style='font-size: 12px;'>
+    <div style='font-size: 10px; margin-top: 20px;'>
         <p>Fuentes de las recomendaciones:</p>
         <p><a href="https://open.spotify.com/show/1TDJJoHWEq7Nbh3yEBOJOj" target="_blank">Psicología al desnudo - Psimammoliti</a></p>
-        <p><a href="https://www.javeriana.edu.co/mentescolectivas/">Mentes Colectivas - Universidad Javeriana</a></p>
+        <p><a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">Mentes Colectivas - Universidad Javeriana</a></p>
     </div>
 """, unsafe_allow_html=True)
+
