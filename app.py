@@ -46,7 +46,7 @@ st.markdown("""
 st.markdown('<h1 class="title">Chatbot de Bienestar Emocional</h1>', unsafe_allow_html=True)
 
 st.sidebar.image("robot.png", use_column_width=True)
-st.sidebar.header("###Asistente Virtual")
+st.sidebar.header("Asistente Virtual")
 st.sidebar.write("Si mi recomendación no es suficiente, por favor consulta las siguientes líneas de emergencia:")
 st.sidebar.write("""- Línea 155: Orientación psicosocial y jurídica a las víctimas de violencia (24/7).
 - Línea 123: Policía Nacional.
@@ -121,8 +121,26 @@ if st.button("Dame una recomendación"):
         sentiment_class = predict_sentiment(model, user_input, tokenizer, loaded_label_encoder)
         if sentiment_class:
             recommendation = get_recommendation(sentiment_class)
-            st.write(f"Parece que hoy te sentiste: {sentiment_class.capitalize()}")
-            st.write(f"Recomendación: {recommendation}")
+            st.write(f"Parece que hoy te sentiste {sentiment_class.capitalize()}")
+            st.write(f"**Te recomendaría:** {recommendation}") 
+            
+            # Previsualización del podcast de Spotify
+            st.markdown("Te dejo una guía más profunda:")
+            if sentiment_class == 'triste':
+                st.markdown("<iframe src='https://open.spotify.com/episode/4dBS0Murh9gq3bfdxYk586' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
+            elif sentiment_class == 'enojado':
+                st.markdown("<iframe src='https://open.spotify.com/episode/18HT8O4q8xlnYeZT5ZsG1u' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
+            elif sentiment_class == 'alegre':
+                st.markdown("<iframe src='https://open.spotify.com/episode/3xNzy6pX69kxzbXyBxdKhH' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
+            elif sentiment_class == 'tranquilo':
+                st.markdown("<iframe src='https://open.spotify.com/episode/0fVpgf337RUpiznN9OWC41' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
+            elif sentiment_class == 'asustado':
+                st.markdown("<iframe src='https://open.spotify.com/episode/072dbrBYhLYGSf2dBN1ri0' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
+            elif sentiment_class == 'empoderado':
+                st.markdown("<iframe src='https://open.spotify.com/episode/32qnzifpWXdB9nxagTwDGN' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
+            elif sentiment_class == 'General':
+                st.markdown("<iframe src='https://open.spotify.com/episode/2s9xotmpUgEbrR7mmGEC9m' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
+
         else:
             st.warning("No se pudo realizar la predicción.")
     else:
