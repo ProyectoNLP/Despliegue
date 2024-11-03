@@ -62,6 +62,7 @@ st.markdown("""
     </script>
 """, unsafe_allow_html=True)
 
+
 st.sidebar.image("robot.png", use_column_width=True)
 st.sidebar.header("Asistente Virtual")
 st.sidebar.write("Si mi recomendación no es suficiente, por favor consulta las siguientes líneas de emergencia:")
