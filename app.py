@@ -105,10 +105,12 @@ recommendations = recomendaciones_df.groupby('Sentimiento')['Recomendacion'].app
 
 # Función para obtener una recomendación aleatoria
 def get_recommendation(sentiment):
-    if sentiment.lower() in recommendations:
-        return random.choice(recommendations[sentiment.lower()].split("\n")).strip()
+    sentiment = sentiment.lower()
+    if sentiment in recommendations:
+        return random.choice(recommendations[sentiment])  # Escoge aleatoriamente de la lista
     else:
-        return random.choice(recommendations["General"].split("\n")).strip()  # Usa recomendaciones generales si no se encuentra el sentimiento
+        # Asegúrate de que haya recomendaciones generales si no se encuentra el sentimiento
+        return random.choice(recommendations.get("General", ["No hay recomendaciones disponibles."])) # Usa recomendaciones generales si no se encuentra el sentimiento
 
 # Entrada del usuario y ejecución de la predicción
 user_input = st.text_area("¿Cómo te sientes hoy?")
