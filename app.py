@@ -156,7 +156,7 @@ if st.button("Dame una recomendación"):
             # Mensaje sobre el servicio
             st.markdown("""
                 <div style='margin-top: 20px;'>
-                    <p><strong>Recuerda que este servicio no reemplaza los servicios que te puede brindar un profesional de psicología, solo es una herramienta.</strong></p>
+                    <p><strong>Recuerda que esta herramienta no reemplaza los servicios que te puede brindar un profesional de psicología. </strong></p>
                 </div>
             """, unsafe_allow_html=True)
             
