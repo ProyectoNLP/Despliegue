@@ -46,7 +46,8 @@ st.markdown("""
 st.markdown('<h1 class="title">Chatbot de Bienestar Emocional</h1>', unsafe_allow_html=True)
 
 st.sidebar.image("robot.png", use_column_width=True)
-st.sidebar.write("### Líneas de Emergencia")
+st.sidebar.header("###Asistente Virtual")
+st.sidebar.write("Si mi recomendación no es suficiente, por favor consulta las siguientes líneas de emergencia:")
 st.sidebar.write("""- Línea 155: Orientación psicosocial y jurídica a las víctimas de violencia (24/7).
 - Línea 123: Policía Nacional.
 - Línea 122: Denuncias de violencia intrafamiliar, de género y violencia sexual.""")
