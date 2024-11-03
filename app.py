@@ -100,9 +100,8 @@ def predict_sentiment(model, user_input, tokenizer, loaded_label_encoder):
 # Cargar las recomendaciones desde el archivo CSV
 recomendaciones_df = pd.read_csv('recomendaciones.csv', sep=';')
 
-# Asegúrate de que el archivo tiene una columna llamada 'sentimiento' y 'recomendacion'
-# Convertir el DataFrame a un diccionario
-recommendations = {row['Sentiment']: row['Recomendacion'] for index, row in recomendaciones_df.iterrows()}
+# Convertir el DataFrame a un diccionario donde cada 'Sentimiento' tiene una lista de recomendaciones
+recommendations = recomendaciones_df.groupby('Sentimiento')['Recomendacion'].apply(list).to_dict()
 
 # Función para obtener una recomendación aleatoria
 def get_recommendation(sentiment):
