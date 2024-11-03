@@ -67,6 +67,17 @@ translation_dict = {
     'scared': 'asustado'
 }
 
+# Diccionario de emojis por sentimiento
+emoji_dict = {
+    'tranquilo': '😌',
+    'enojado': '😠',
+    'empoderado': '💪',
+    'triste': '😢',
+    'alegre': '😊',
+    'asustado': '😨',
+    'General': '😓'  # Carita con una lágrima en la frente
+}
+
 # Cargar el modelo y otros elementos necesarios
 model = tf.keras.models.load_model('Modelo.keras')
 
@@ -121,7 +132,7 @@ if st.button("Dame una recomendación"):
         sentiment_class = predict_sentiment(model, user_input, tokenizer, loaded_label_encoder)
         if sentiment_class:
             recommendation = get_recommendation(sentiment_class)
-            st.write(f"Parece que hoy te sentiste {sentiment_class.capitalize()}")
+            st.write(f"Parece que hoy te sentiste {sentiment_class} {emoji}")
             st.write(f"**Te recomendaría:** {recommendation}") 
             
             # Previsualización del podcast de Spotify
