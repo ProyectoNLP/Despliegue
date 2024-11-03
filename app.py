@@ -153,20 +153,14 @@ if st.button("Dame una recomendación"):
             else:  # Para el sentimiento "General"
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/2s9xotmpUgEbrR7mmGEC9m' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
 
+            st.markdown("""
+                <div style='font-size: 5px; margin-top: 50px;'>
+                    <p>Fuentes de las recomendaciones:</p>
+                    <p><a href="https://open.spotify.com/show/1TDJJoHWEq7Nbh3yEBOJOj" target="_blank">Psicología al desnudo - Psimammoliti</a></p>
+                    <p><a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">Mentes Colectivas - Universidad Javeriana</a></p>
+                </div>
+            """, unsafe_allow_html=True)
         else:
             st.warning("No se pudo realizar la predicción.")
     else:
         st.warning("Por favor, ingresa un texto para predecir.")
-
-
-
-
-# Al final de tu código, antes de cerrar el bloque principal
-st.markdown("""
-    <div style='font-size: 1px; margin-top: 200px;'>
-        <p>Fuentes de las recomendaciones:</p>
-        <p><a href="https://open.spotify.com/show/1TDJJoHWEq7Nbh3yEBOJOj" target="_blank">Psicología al desnudo - Psimammoliti</a></p>
-        <p><a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">Mentes Colectivas - Universidad Javeriana</a></p>
-    </div>
-""", unsafe_allow_html=True)
-
