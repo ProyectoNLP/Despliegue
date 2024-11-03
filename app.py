@@ -134,7 +134,7 @@ if st.button("Dame una recomendación"):
             recommendation = get_recommendation(sentiment_class)
             emoji = emoji_dict.get(sentiment_class, '')
             st.write(f"Parece que hoy te sentiste {sentiment_class} {emoji}")
-            st.write(f"**Te recomendaría:** {recommendation}") 
+            st.write(recommendation) 
             
             # Previsualización del podcast de Spotify
             st.markdown("Te dejo una guía más profunda:")
