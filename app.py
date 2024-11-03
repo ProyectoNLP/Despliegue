@@ -46,22 +46,11 @@ st.markdown("""
 st.markdown('<h1 class="title">Chatbot de Bienestar Emocional</h1>', unsafe_allow_html=True)
 
 # Música de fondo con control de volumen
-st.markdown("""
-    <audio id="background-music" autoplay loop>
-        <source src="musica.mp3" type="audio/mp3">
-        Tu navegador no soporta el elemento de audio.
-    </audio>
-    <br>
-    <label for="volumeControl">Control de volumen:</label>
-    <input type="range" id="volumeControl" min="0" max="1" step="0.1" value="0.5" onchange="setVolume(this.value)">
-    <script>
-        var audio = document.getElementById('background-music');
-        function setVolume(value) {
-            audio.volume = value;
-        }
-    </script>
-""", unsafe_allow_html=True)
+st.markdown("### Música 🎶")
+audio_file = open('musica.mp3', 'rb')
+audio_bytes = audio_file.read()
 
+st.audio(audio_bytes, format='audio/mp3', start_time=0)
 
 st.sidebar.image("robot.png", use_column_width=True)
 st.sidebar.header("Asistente Virtual")
