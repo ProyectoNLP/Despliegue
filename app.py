@@ -132,6 +132,7 @@ if st.button("Dame una recomendación"):
         sentiment_class = predict_sentiment(model, user_input, tokenizer, loaded_label_encoder)
         if sentiment_class:
             recommendation = get_recommendation(sentiment_class)
+            emoji = emoji_dict.get(sentiment_class, '')
             st.write(f"Parece que hoy te sentiste {sentiment_class} {emoji}")
             st.write(f"**Te recomendaría:** {recommendation}") 
             
