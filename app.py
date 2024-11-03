@@ -7,10 +7,6 @@ import tensorflow as tf
 from sklearn.preprocessing import LabelEncoder
 import random
 
-# Música de fondo con Streamlit
-st.markdown("<div class='audio-container'>Música 🎶</div>", unsafe_allow_html=True)
-st.audio("musica.mp3", format="audio/mp3", start_time=0)
-
 # Título de la aplicación y mensaje de bienvenida
 st.markdown("""
 <style>
@@ -161,3 +157,15 @@ if st.button("Dame una recomendación"):
             st.warning("No se pudo realizar la predicción.")
     else:
         st.warning("Por favor, ingresa un texto para predecir.")
+
+
+
+
+# Al final de tu código, antes de cerrar el bloque principal
+st.markdown("""
+    <div style='font-size: 12px;'>
+        <p>Fuentes de las recomendaciones:</p>
+        <p><a href="https://open.spotify.com/show/1TDJJoHWEq7Nbh3yEBOJOj" target="_blank">Psicología al desnudo - Psimammoliti</a></p>
+        <p><a href="https://www.javeriana.edu.co/mentescolectivas/">Mentes Colectivas - Universidad Javeriana</a></p>
+    </div>
+""", unsafe_allow_html=True)
