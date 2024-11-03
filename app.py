@@ -48,7 +48,7 @@ st.markdown('<h1 class="title">Chatbot de Bienestar Emocional</h1>', unsafe_allo
 # Música de fondo con control de volumen
 st.markdown("""
     <audio id="background-music" autoplay loop>
-        <source src="ruta/a/tu/musica.mp3" type="audio/mp3">
+        <source src="musica.mp3" type="audio/mp3">
         Tu navegador no soporta el elemento de audio.
     </audio>
     <br>
