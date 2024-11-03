@@ -153,8 +153,16 @@ if st.button("Dame una recomendación"):
             else:  # Para el sentimiento "General"
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/2s9xotmpUgEbrR7mmGEC9m' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
 
+            # Mensaje de referencia a Mentes Colectivas
             st.markdown("""
-                <div style='font-size: 5px; margin-top: 50px;'>
+                <div style='margin-top: 20px;'>
+                    <p>Si quieres hablar con alguien sobre lo que estás viviendo, por favor consulta:</p>
+                    <p><a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">https://www.javeriana.edu.co/mentescolectivas/</a></p>
+                </div>
+            """, unsafe_allow_html=True)
+    
+            st.markdown("""
+                <div style='font-size: 5px; margin-top: 10px;'>
                     <p>Fuentes de las recomendaciones:</p>
                     <p><a href="https://open.spotify.com/show/1TDJJoHWEq7Nbh3yEBOJOj" target="_blank">Psicología al desnudo - Psimammoliti</a></p>
                     <p><a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">Mentes Colectivas - Universidad Javeriana</a></p>
