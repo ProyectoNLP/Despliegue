@@ -157,7 +157,7 @@ if st.button("Dame una recomendación"):
             st.markdown("""
                 <div style='margin-top: 20px;'>
                     <p>Si quieres hablar con alguien sobre lo que estás viviendo, por favor consulta:</p>
-                    <p><a href="https://www.javeriana.edu.co/mentescolectivas/" target="_blank">https://www.javeriana.edu.co/mentescolectivas/</a></p>
+                    <iframe src="https://www.javeriana.edu.co/mentescolectivas/" width="300" height="200" frameborder="0" allowtransparency="true"></iframe>
                 </div>
             """, unsafe_allow_html=True)
     
