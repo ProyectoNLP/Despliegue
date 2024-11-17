@@ -140,15 +140,15 @@ if st.button("Dame una recomendación"):
             st.markdown("Te dejo una guía más profunda:")
             if sentiment_class == 'triste':
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/4dBS0Murh9gq3bfdxYk586' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
-            elif sentiment_class == 'enojado':
+            elif sentiment_class == 'enojado(a)':
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/18HT8O4q8xlnYeZT5ZsG1u' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
             elif sentiment_class == 'alegre':
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/3xNzy6pX69kxzbXyBxdKhH' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
-            elif sentiment_class == 'tranquilo':
+            elif sentiment_class == 'tranquilo(a)':
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/0fVpgf337RUpiznN9OWC41' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
-            elif sentiment_class == 'asustado':
+            elif sentiment_class == 'asustado(a)':
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/072dbrBYhLYGSf2dBN1ri0' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
-            elif sentiment_class == 'empoderado':
+            elif sentiment_class == 'empoderado(a)':
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/32qnzifpWXdB9nxagTwDGN' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
             else:  # Para el sentimiento "General"
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/2s9xotmpUgEbrR7mmGEC9m' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
