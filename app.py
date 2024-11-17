@@ -69,12 +69,12 @@ translation_dict = {
 
 # Diccionario de emojis por sentimiento
 emoji_dict = {
-    'tranquilo': '😌',
-    'enojado': '😠',
-    'empoderado': '💪',
+    'tranquilo/a': '😌',
+    'enojado/a': '😠',
+    'empoderado/a': '💪',
     'triste': '😢',
     'alegre': '😊',
-    'asustado': '😨',
+    'asustado/a': '😨',
     'General': '😓'  # Carita con una lágrima en la frente
 }
 
