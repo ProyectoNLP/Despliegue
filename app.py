@@ -59,22 +59,22 @@ Ingresa tu estado emocional en el menú a continuación para obtener consejos ú
 
 # Diccionario de traducción de sentimientos
 translation_dict = {
-    'peaceful': 'tranquilo',
-    'mad': 'enojado',
-    'powerful': 'empoderado',
+    'peaceful': 'tranquilo(a)',
+    'mad': 'enojado(a)',
+    'powerful': 'empoderado(a)',
     'sad': 'triste',
     'joyful': 'alegre',
-    'scared': 'asustado'
+    'scared': 'asustado(a)'
 }
 
 # Diccionario de emojis por sentimiento
 emoji_dict = {
-    'tranquilo/a': '😌',
-    'enojado/a': '😠',
-    'empoderado/a': '💪',
+    'tranquilo(a)': '😌',
+    'enojado(a)': '😠',
+    'empoderado(a)': '💪',
     'triste': '😢',
     'alegre': '😊',
-    'asustado/a': '😨',
+    'asustado(a)': '😨',
     'General': '😓'  # Carita con una lágrima en la frente
 }
 
