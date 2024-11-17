@@ -54,7 +54,7 @@ st.sidebar.write("""- Línea 155: Orientación psicosocial y jurídica a las ví
 
 st.markdown("---")
 st.write("""¡Bienvenido a la aplicación de bienestar emocional! 😊
-Aquí podrás expresar cómo te sientes y recibir recomendaciones personalizadas para mejorar tu estado de ánimo.
+Aquí podrás expresar cómo te sientes y recibir recomendaciones personalizadas para mejorar tu estado de ánimo. Recuerda que esta herramienta no reemplaza los servicios que te puede brindar un profesional de psicología.
 Ingresa tu estado emocional en el menú a continuación para obtener consejos útiles y prácticos.""")
 
 # Diccionario de traducción de sentimientos
@@ -153,13 +153,6 @@ if st.button("Dame una recomendación"):
             else:  # Para el sentimiento "General"
                 st.markdown("<iframe src='https://open.spotify.com/embed/episode/2s9xotmpUgEbrR7mmGEC9m' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>", unsafe_allow_html=True)
 
-            # Mensaje sobre el servicio
-            st.markdown("""
-                <div style='margin-top: 20px;'>
-                    <p><strong>Recuerda que esta herramienta no reemplaza los servicios que te puede brindar un profesional de psicología. </strong></p>
-                </div>
-            """, unsafe_allow_html=True)
-            
             # Mensaje sobre Mentes Colectivas
             st.markdown("""
                 <div style='margin-top: 5px;'>
